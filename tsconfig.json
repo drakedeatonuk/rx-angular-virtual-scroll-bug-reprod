@@ -1,0 +1,15 @@
+{
+  "files": [
+    "app/src/main.ts",
+    "app/src/polyfills.ts"
+  ],
+  "include": [],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "moduleResolution": "Node"
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ],
+}

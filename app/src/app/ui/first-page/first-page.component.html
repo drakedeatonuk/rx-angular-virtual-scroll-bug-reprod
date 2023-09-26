@@ -1,0 +1,26 @@
+<ion-header mode="ios">
+  <ion-toolbar color="danger">
+    <ion-title>
+      First Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="success" [scrollY]="false">
+  <rx-virtual-scroll-viewport scrollWindow [itemSize]="80" class="ion-content-scroll-host">
+    <ion-infinite-scroll class="ion-infinite-scroll tw-mt-4 tw-pb-3" (ionInfinite)="onIonInfinite($event)"
+      position="top" threshold="15%">
+      <ion-infinite-scroll-content class="tw-mb-16" loadingSpinner="crescent"> </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <div *rxVirtualFor="let item of items">
+      <div style="height: 50px; background-color: palegreen; margin: 10px; height: 30px; width: 100%">
+        <p style="color:black;">
+          {{item}}
+        </p>
+      </div>
+    </div>
+  </rx-virtual-scroll-viewport>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="warning">
+  </ion-toolbar>
+</ion-footer>
